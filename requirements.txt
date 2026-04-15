@@ -1,0 +1,43 @@
+# =============================================================================
+#  Kisseki — Agente Conversacional  |  Dependências
+# =============================================================================
+
+# ── Base — sempre necessário ───────────────────────────────────────────────────
+langchain>=0.3.0,<0.4.0
+langchain-core>=0.3.0,<0.4.0
+langchain-community>=0.3.0,<0.4.0
+langchain-text-splitters>=0.3.0,<0.4.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+chromadb>=0.5.0
+langchain-chroma>=0.2.0    # substitui langchain_community.vectorstores.Chroma
+markdown>=3.6
+
+# ── Busca híbrida BM25 (sempre necessário) ─────────────────────────────────────
+rank-bm25>=0.2.2
+
+# ── OpenAI — LLM_PROVIDER=openai ou EMBEDDING_PROVIDER=openai ─────────────────
+langchain-openai>=0.2.0,<0.3.0
+openai>=1.50.0,<2.0.0
+
+# ── Anthropic — LLM_PROVIDER=anthropic ou Agent Core ──────────────────────────
+# O agente Kisseki (Projeto 2) usa sempre modelos Anthropic independentemente
+# do LLM_PROVIDER configurado para o RAG. Esta dependência é obrigatória.
+langchain-anthropic>=0.3.0
+
+# ── LangGraph — Agent Core (Projeto 2) ────────────────────────────────────────
+langgraph>=0.2.0
+langgraph-checkpoint-sqlite>=1.0.0
+
+# ── Google Gemini — LLM_PROVIDER=google ou EMBEDDING_PROVIDER=google ──────────
+# pip install langchain-google-genai
+# langchain-google-genai>=2.0.0
+
+# ── Ollama (local) — LLM_PROVIDER=ollama ou EMBEDDING_PROVIDER=ollama ─────────
+# pip install langchain-ollama
+# langchain-ollama>=0.2.0
+
+# ── HuggingFace (local) — EMBEDDING_PROVIDER=huggingface ──────────────────────
+# pip install langchain-huggingface sentence-transformers
+# langchain-huggingface>=0.1.0
+# sentence-transformers>=3.0.0

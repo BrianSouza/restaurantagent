@@ -1,0 +1,66 @@
+# =========================================================
+# Python cache and build artifacts
+# =========================================================
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+build/
+dist/
+*.egg-info/
+*.egg
+
+# =========================================================
+# Virtual environments
+# =========================================================
+.venv/
+venv/
+env/
+ENV/
+
+# =========================================================
+# Environment files and secrets
+# =========================================================
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Keep template env files versioned
+!.env.example
+
+# =========================================================
+# Local RAG / vector database data
+# =========================================================
+chroma_db/
+chromadb_data/
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================================================
+# Logs and runtime traces
+# =========================================================
+*.log
+logs/
+traces/
+*.trace
+
+# =========================================================
+# IDE/editor and OS files
+# =========================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
